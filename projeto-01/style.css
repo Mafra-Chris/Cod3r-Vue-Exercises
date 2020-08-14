@@ -1,0 +1,89 @@
+body{
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+#app{
+    width: 90%;
+    margin:0 auto;
+    text-align: center;
+}
+
+#players{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.barraVida{
+    width: 500px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.btnMove{
+    border: none;
+    padding: .5rem;
+    border-radius: 5px;
+    margin: .5rem;
+}
+
+#btnAtaque{
+    background-color: rgb(196, 25, 25);
+    color: white;
+}
+
+#btnEspecial{
+    background-color: rgb(255, 190, 10);
+    color: black;
+}
+
+#btnCurar{
+    background-color: rgb(15, 128, 0);
+    color: white;
+}
+
+#btnDesistir{
+    background-color: black;
+    color: white;
+}
+
+#btnIniciar{
+    background-color: rgb(0, 2, 126);
+    color: white;
+}
+
+.progresso{
+    background-color: red;
+    height: 100%;
+}
+
+.monstro-img{
+    width: 60%;
+    margin-bottom: 2rem;
+}
+
+.player-img{
+    width: 51.5%;
+    margin-bottom: 2rem;
+}
+
+.player{
+    color: white;
+    list-style: none;
+}
+
+.monster{
+    color: white;
+    list-style: none;
+}

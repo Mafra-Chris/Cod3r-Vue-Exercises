@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue"></script>
+    <title>Matador de Monstro</title>
+</head>
+<body>
+    <div id="app">
+        <div id="players">
+            <div id="jogador" class="player">
+                <h1>Jogador</h1>
+                <img src="player.png" alt="" class="player-img">
+                <div class="barraVida">
+                    <div class="progresso" :style="{width: widthP}"></div>
+                </div>
+                <p class="percentVida">{{vidaP + '%'}}</p>
+            </div>
+            <div id="monstro" class="player">
+                <h1>Monstro</h1>
+                <img src="monstro.png" alt="" class="monstro-img">
+                <div class="barraVida">
+                    <div class="progresso" :style="{width: widthM}"></div>
+                </div>
+                <p class="percentVida">{{vidaM + '%'}}</p>
+            </div>
+        </div>
+
+        <div id="game">
+            <div id="iniciar" v-if="iniciar">
+                <button class="btnMove" id="btnIniciar" @click="iniciarJogo">INICIAR NOVO JOGO</button>
+            </div>
+            <div id="moves"  v-else-if="!iniciar">
+                <button class="btnMove" id="btnAtaque" @click="atacar">ATAQUE</button>
+                <button class="btnMove" id="btnEspecial" @click="especial">ATAQUE ESPECIAL</button>
+                <button class="btnMove" id="btnCurar" @click="curar">CURAR</button>
+                <button class="btnMove" id="btnDesistir" @click="desistir">DESISTIR</button>
+            </div>
+        </div>
+
+        <div id="logs" v-if="logs.length"> 
+            <ul>
+                <li class="log" v-for="log in logs" :class="log.cls"> 
+                    {{ log.text }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
